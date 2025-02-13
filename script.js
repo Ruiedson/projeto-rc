@@ -1,25 +1,16 @@
-function toggleTheme() {
-    const html = document.documentElement;
-    html.classList.toggle("light");
-
-    const img = document.querySelector("#profile img");
-
+function toggleMode() {
+    const html = document.documentElement
+    html.classList.toggle("light")
+  
+    // pegar a tag img
+    const img = document.querySelector("#profile img")
+  
+    // substituir a imagem
     if (html.classList.contains("light")) {
-        img.setAttribute("src", "./assets/avatar-light.png");
-        localStorage.setItem("theme", "light");
+      // se tiver light mode, adicionar a imagem light
+      img.setAttribute("src", "./assets/avatar-light.png")
     } else {
-        img.setAttribute("src", "./assets/avatar.png");
-        localStorage.setItem("theme", "dark");
+      // set tiver sem light mode, manter a imagem normal
+      img.setAttribute("src", "./assets/avatar.png")
     }
-}
-
-window.onload = function () {
-    const theme = localStorage.getItem("theme");
-    const html = document.documentElement;
-    const img = document.querySelector("#profile img");
-
-    if (theme === "light") {
-        html.classList.add("light");
-        if (img) img.setAttribute("src", "./assets/avatar-light.png");
-    }
-};
+  }
