@@ -6,7 +6,7 @@
 
 :root {
     --text-color: white;
-    --bg-url: url(./Assets/bg-mobile.jpg);
+    --bg-url: url(./assets/bg-mobile.jpg);
     --stroke-color: rgba(255, 255, 255, 0.5);
     --surface-color: rgba(255, 255, 255, 0.005);
     --surface-color-houver: rgba(0, 0, 0, 0.02);
@@ -16,7 +16,7 @@
 
 .light {
     --text-color: black;
-    --bg-url: url(./Assets/bg-mobile-light.jpg);
+    --bg-url: url(./assets/bg-mobile-light.jpg);
     --stroke-color: rgba(0, 0, 0, 0.5);
     --surface-color: rgba(0, 0, 0, 0.05);
     --surface-color-houver: rgba(0, 0, 0, 0.02);
@@ -140,7 +140,8 @@ ul li a {
 }
 
 /* pseudo-selector */
-ul li a :hover {
+ul li a:hover {
+
     background: rgba(255, 255, 255, 0.05);
     border: 1.5px solid var(--text-color);
  }

@@ -13,11 +13,13 @@ function toggleTheme() {
     }
 }
 
-// Mantém o tema salvo ao recarregar a página
 window.onload = function () {
     const theme = localStorage.getItem("theme");
+    const html = document.documentElement;
+    const img = document.querySelector("#profile img");
+
     if (theme === "light") {
-        document.documentElement.classList.add("light");
-        document.querySelector("#profile img").setAttribute("src", "./assets/avatar-light.png");
+        html.classList.add("light");
+        if (img) img.setAttribute("src", "./assets/avatar-light.png");
     }
 };
